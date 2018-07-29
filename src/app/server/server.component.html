@@ -1,0 +1,48 @@
+<br>
+
+<h1 align="center">I am in Component</h1>
+<hr>
+<p><b>String Interpolation example</b></p>
+<p>
+  The {{ serverName }} with id {{ serverId }} is offline.
+</p>
+<hr>
+
+
+
+<p><b>Property binding example</b></p>
+
+<button class="btn btn-primary" [disabled]="!allowNewServer">Add server</button>
+<p>{{ allowNewServer }}</p>
+
+
+<hr>
+
+
+
+
+
+<p><b>Event binding example</b></p>
+<button class="btn btn-primary"  (click)="onCreateServer()">Add server</button>
+
+<p>{{ serverCreationStatus }}</p>
+<hr>
+
+
+
+<p><b>Two-way data binding</b></p>
+
+<label>Server Name:</label>
+<input type="text" class="form-control col-sm-3" [(ngModel)]="serverName">
+<p>{{ serverName }}</p>
+
+<hr>
+
+
+
+<p><b>Using all types of binding</b></p>
+
+<label>Server Name:</label>
+<input type="text" class="form-control col-sm-3" [(ngModel)]="serverName"><br>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add server</button>
+<p>{{ serverCreationStatus }}</p>
